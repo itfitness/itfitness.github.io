@@ -1,90 +1,536 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>我的证书</title>
-		<!-- for-mobile-apps -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<!-- //for-mobile-apps -->
-		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="css/projectsstyle.css" rel="stylesheet" type="text/css" media="all" />
-		<!-- js -->
-		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-		<!-- start-smooth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<link rel="shortcut icon" href="./favicon.ico" />
-		<!-- start-smooth-scrolling -->
-		<style>
-			.certificates{
-				background-image: url(images/certificatesbg.jpg);
-			}
-		</style>
-	</head>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#040911">
+<title>我的证书 | Li Meng Lin</title>
+<link rel="shortcut icon" href="./favicon.ico" />
+<style>
+  :root {
+    --bg: #040911;
+    --card-bg: #0a101f;
+    --card-bg-2: #0e1628;
+    --border: rgba(99, 130, 200, 0.16);
+    --text-main: #e6e8ee;
+    --text-sub: #8a92a6;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --accent-purple: #a78bfa;
+    --badge-bg: rgba(59, 130, 246, 0.1);
+  }
 
-	<body>
-		<div class="projects certificates" id="projects">
-			<div class="container">
-				<span class="about-top-w3" style="font-size: 1em;">My certificate</span>
-				<h4 class="title-w3ls" style="font-size: 2em;">我的证书</h4>
-				<div class="news-bottom">
-					<div class="news-one-wthree-agile">
-						<div class="col-md-12 news-left">
-							<div class="biseller-column">
-								<a class="lightbox">
-									<img src="images/harmony.jpg" alt="" /> 
-								</a>
-							</div>
-											
-						</div>
-						<br/>
-						<div class="col-md-12 news-left">
-							<div class="biseller-column">
-								<a class="lightbox">
-									<img src="images/ruankao.png" alt="" /> 
-								</a>
-							</div>
-											
-						</div>
-						<br/>
-						<div class="col-md-12 news-left">
-							<div class="biseller-column">
-								<a class="lightbox">
-									<img src="images/zhiye.png" alt="" /> 
-								</a>
-							</div>
-					
-						</div>
-						<!-- <div class="col-md-6 news-right">
-							<a href="https://www.hehuidai.com/wap/downloadAndroid">
-								<h4>小美好APP软著</h4>
-							</a>
-							<p class="para-w3-agile">一款由本人在济南合会金融软件服务有限公司任职期间独立开发的P2P互联网金融APP，通过此项目使我在自定义View方面有了很大的进步，能够进行高级的自定义View的开发，另外这个项目在对于Http请求所携带的数据有着复杂的处理如cookie持久化，这使我对于HTTP协议有了更加深入的理解。</p>
-						</div> -->
-						<div class="clearfix"> </div>
-					</div>
-					<!-- <div class="news-one-wthree-agile">
-						<div class="col-md-12 news-left">
-							<div class="biseller-column">
-								<a class="lightbox">
-									<img src="images/ruanzhu.jpg" alt="" /> 
-								</a>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div> -->
-				</div>
-			</div>
-		</div>
-		</div>
-		<!-- here stars scrolling icon -->
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$().UItoTop({
-					easingType: 'easeOutQuart'
-				});
-		
-			});
-		</script>
-	</body>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* 隐藏页面滚动条（保留滚动能力） */
+  html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-main);
+    font-family: "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  a { text-decoration: none; color: inherit; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  button { font-family: inherit; }
+
+  /* ---------- 背景装饰：光晕 + 粒子 ---------- */
+  .bg-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .bg-glow.glow-1 {
+    width: 640px; height: 640px;
+    background: rgba(59, 130, 246, 0.10);
+    top: -180px; right: -120px;
+  }
+  .bg-glow.glow-2 {
+    width: 520px; height: 520px;
+    background: rgba(167, 139, 250, 0.045);
+    bottom: -220px; left: -180px;
+  }
+  .bg-dots {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(rgba(96, 165, 250, 0.35) 1px, transparent 1px),
+      radial-gradient(rgba(96, 165, 250, 0.18) 1px, transparent 1px);
+    background-size: 220px 220px, 160px 160px;
+    background-position: 40px 60px, 120px 20px;
+    opacity: 0.22;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.2) 60%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.2) 60%, transparent);
+  }
+
+  .page { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+
+  /* ---------- 顶部导航 ---------- */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(10, 14, 26, 0.72);
+    border-bottom: 1px solid rgba(99, 130, 200, 0.08);
+  }
+  .header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo img { height: 44px; display: block; }
+  .nav { display: flex; gap: 40px; }
+  .nav a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-sub);
+    padding: 6px 2px;
+    position: relative;
+    transition: color 0.2s;
+  }
+  .nav a:hover { color: var(--text-main); }
+  .nav a.active { color: var(--text-main); }
+  .nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4px;
+    width: 22px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+
+  /* ---------- 移动端菜单 ---------- */
+  .menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 0 10px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .menu-btn span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text-main);
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .menu-btn:hover { border-color: rgba(96, 165, 250, 0.45); }
+  .menu-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-btn.open span:nth-child(2) { opacity: 0; }
+  .menu-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    padding: 4px 40px 12px;
+    border-top: 1px solid rgba(99, 130, 200, 0.1);
+    background: rgba(10, 14, 26, 0.98);
+  }
+  .mobile-nav a {
+    padding: 13px 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-sub);
+    border-bottom: 1px solid rgba(99, 130, 200, 0.08);
+    transition: color 0.2s;
+  }
+  .mobile-nav a:last-child { border-bottom: none; }
+  .mobile-nav a:hover, .mobile-nav a.active { color: var(--accent-light); }
+  .mobile-nav.open { display: flex; }
+
+  /* ---------- 页头 ---------- */
+  .page-hero { padding: 52px 0 36px; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: var(--badge-bg);
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    color: var(--accent-light);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .hero-badge .code { font-family: Consolas, Menlo, monospace; font-weight: 700; }
+  .page-hero h1 {
+    font-size: clamp(28px, 6vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+  }
+  .page-hero h1 .name {
+    background: linear-gradient(100deg, var(--accent-light), var(--accent-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .page-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: var(--text-sub);
+    max-width: 640px;
+  }
+
+  /* ---------- 证书网格 ---------- */
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+  .cert-card {
+    background: linear-gradient(180deg, var(--card-bg-2), var(--card-bg));
+    border: 1px solid rgba(99, 130, 200, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+  }
+  .cert-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(96, 165, 250, 0.4);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(96, 165, 250, 0.12);
+  }
+
+  .cert-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    padding: 20px;
+    background: #0d1322;
+    border-bottom: 1px solid rgba(99, 130, 200, 0.15);
+    overflow: hidden;
+  }
+  .cert-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s;
+  }
+  .cert-card:hover .cert-frame img { transform: scale(1.04); }
+
+  .cert-body {
+    padding: 18px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .cert-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .cert-medal {
+    width: 30px; height: 30px;
+    flex-shrink: 0;
+    border-radius: 9px;
+    background: var(--badge-bg);
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-light);
+  }
+  .cert-medal svg { width: 15px; height: 15px; }
+  .cert-title { font-size: 17px; font-weight: 600; letter-spacing: 0.3px; }
+
+  .cert-rows { padding-top: 2px; }
+  .cert-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px dashed rgba(99, 130, 200, 0.12);
+    font-size: 14px;
+  }
+  .cert-row:last-child { border-bottom: none; }
+  .cert-label { color: var(--text-sub); }
+  .cert-value { font-weight: 600; color: var(--accent-light); }
+
+  .card-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-light);
+    margin-top: auto;
+    padding-top: 14px;
+    transition: gap 0.2s;
+  }
+  .card-more:hover { gap: 11px; }
+  .card-more svg { width: 14px; height: 14px; }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    border-top: 1px solid rgba(99, 130, 200, 0.1);
+    padding: 16px 0 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #6b7387;
+    letter-spacing: 0.4px;
+  }
+
+  /* ---------- 响应式 ---------- */
+  /* 平板：隐藏桌面导航，改用汉堡菜单；证书网格改为两栏 */
+  @media (max-width: 1024px) {
+    .nav { display: none; }
+    .menu-btn { display: flex; }
+    .certs-grid { grid-template-columns: repeat(2, 1fr); }
+    .cert-frame { height: 300px; }
+  }
+  /* 手机端细节适配 */
+  @media (max-width: 640px) {
+    .page, .header-inner { padding: 0 20px; }
+    .header-inner { height: 62px; }
+    .mobile-nav { padding: 4px 20px 12px; }
+    .logo img { height: 38px; }
+    .page-hero { padding: 36px 0 28px; }
+    .hero-badge { font-size: 13px; padding: 6px 14px; margin-bottom: 14px; }
+    .page-hero-desc { font-size: 14.5px; }
+    .certs-grid { grid-template-columns: 1fr; gap: 16px; padding-bottom: 28px; }
+    .cert-frame { height: 340px; }
+    .cert-title { font-size: 16.5px; }
+    .cert-body { padding: 16px 16px; }
+    .footer { padding: 14px 0 18px; font-size: 12px; }
+  }
+  /* 尊重系统"减少动态效果"设置 */
+  @media (prefers-reduced-motion: reduce) {
+    .cert-card, .cert-frame img, .card-more { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-glow glow-1"></div>
+<div class="bg-glow glow-2"></div>
+<div class="bg-dots"></div>
+
+<!-- ===================== 导航栏 ===================== -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="./index.html">
+      <img src="images/home-topleftlogo.png" alt="Li Lin Logo">
+    </a>
+    <nav class="nav">
+      <a href="./index.html">首页</a>
+      <a href="https://www.jianshu.com/u/766a13e86f82" target="_blank" rel="noopener">技术博客</a>
+      <a href="./projects.html">我的项目</a>
+      <a href="./resume/resume.html" target="_blank">我的简历</a>
+      <a class="active" href="./certificates.html">我的证书</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="移动端导航">
+    <a href="./index.html">首页</a>
+    <a href="https://www.jianshu.com/u/766a13e86f82" target="_blank" rel="noopener">技术博客</a>
+    <a href="./projects.html">我的项目</a>
+    <a href="./resume/resume.html" target="_blank">我的简历</a>
+    <a class="active" href="./certificates.html">我的证书</a>
+  </nav>
+</header>
+
+<div class="page">
+
+  <!-- ===================== 页头 ===================== -->
+  <section class="page-hero">
+    <div class="hero-badge"><span class="code">&lt;/&gt;</span> Certificates</div>
+    <h1>我的<span class="name">证书</span></h1>
+    <p class="page-hero-desc">通过权威机构的专业认证，持续验证技术能力，涵盖软件设计、职业技能、HarmonyOS 生态与人工智能方向。</p>
+  </section>
+
+  <!-- ===================== 证书网格 ===================== -->
+  <section class="certs-grid">
+
+    <article class="cert-card">
+      <a class="cert-frame" href="images/ruankao.png" target="_blank" rel="noopener" aria-label="查看证书大图">
+        <img src="images/ruankao.png" alt="软件设计师（软考中级）证书" loading="lazy">
+      </a>
+      <div class="cert-body">
+        <div class="cert-head">
+          <span class="cert-medal">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="6" r="3.3"/><path d="M6 8.8 4.7 13l3.3-1.4 3.3 1.4-1.3-4.2"/></svg>
+          </span>
+          <h3 class="cert-title">软件设计师</h3>
+        </div>
+        <div class="cert-rows">
+          <div class="cert-row">
+            <span class="cert-label">认证级别</span>
+            <span class="cert-value">中级（软考）</span>
+          </div>
+          <div class="cert-row">
+            <span class="cert-label">获得时间</span>
+            <span class="cert-value">2021 年 11 月</span>
+          </div>
+        </div>
+        <a class="card-more" href="images/ruankao.png" target="_blank" rel="noopener">
+          查看原图
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="cert-card">
+      <a class="cert-frame" href="images/zhiye.png" target="_blank" rel="noopener" aria-label="查看证书大图">
+        <img src="images/zhiye.png" alt="计算机程序设计员（三级）职业资格证书" loading="lazy">
+      </a>
+      <div class="cert-body">
+        <div class="cert-head">
+          <span class="cert-medal">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="6" r="3.3"/><path d="M6 8.8 4.7 13l3.3-1.4 3.3 1.4-1.3-4.2"/></svg>
+          </span>
+          <h3 class="cert-title">计算机程序设计员</h3>
+        </div>
+        <div class="cert-rows">
+          <div class="cert-row">
+            <span class="cert-label">认证级别</span>
+            <span class="cert-value">三级 / 高级技能</span>
+          </div>
+          <div class="cert-row">
+            <span class="cert-label">获得时间</span>
+            <span class="cert-value">2017 年 11 月</span>
+          </div>
+        </div>
+        <a class="card-more" href="images/zhiye.png" target="_blank" rel="noopener">
+          查看原图
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="cert-card">
+      <a class="cert-frame" href="images/CAIE.jpeg" target="_blank" rel="noopener" aria-label="查看证书大图">
+        <img src="images/CAIE.jpeg" alt="CAIE 人工智能工程师（一级）证书" loading="lazy">
+      </a>
+      <div class="cert-body">
+        <div class="cert-head">
+          <span class="cert-medal">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="6" r="3.3"/><path d="M6 8.8 4.7 13l3.3-1.4 3.3 1.4-1.3-4.2"/></svg>
+          </span>
+          <h3 class="cert-title">CAIE 人工智能工程师</h3>
+        </div>
+        <div class="cert-rows">
+          <div class="cert-row">
+            <span class="cert-label">认证级别</span>
+            <span class="cert-value">LEVEL I（一级）</span>
+          </div>
+          <div class="cert-row">
+            <span class="cert-label">获得时间</span>
+            <span class="cert-value">2026 年 8 月</span>
+          </div>
+        </div>
+        <a class="card-more" href="images/CAIE.jpeg" target="_blank" rel="noopener">
+          查看原图
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="cert-card">
+      <a class="cert-frame" href="images/harmony.jpg" target="_blank" rel="noopener" aria-label="查看证书大图">
+        <img src="images/harmony.jpg" alt="HarmonyOS 应用开发者高级认证证书" loading="lazy">
+      </a>
+      <div class="cert-body">
+        <div class="cert-head">
+          <span class="cert-medal">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="6" r="3.3"/><path d="M6 8.8 4.7 13l3.3-1.4 3.3 1.4-1.3-4.2"/></svg>
+          </span>
+          <h3 class="cert-title">HarmonyOS 应用开发者高级认证</h3>
+        </div>
+        <div class="cert-rows">
+          <div class="cert-row">
+            <span class="cert-label">认证方向</span>
+            <span class="cert-value">HarmonyOS 应用开发</span>
+          </div>
+          <div class="cert-row">
+            <span class="cert-label">认证级别</span>
+            <span class="cert-value">高级（Professional）</span>
+          </div>
+        </div>
+        <a class="card-more" href="images/harmony.jpg" target="_blank" rel="noopener">
+          查看原图
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    © 2026 Li Meng Lin. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var menuBtn = document.getElementById('menuBtn');
+    var mobileNav = document.getElementById('mobileNav');
+
+    menuBtn.addEventListener('click', function () {
+      var open = !mobileNav.classList.contains('open');
+      mobileNav.classList.toggle('open', open);
+      menuBtn.classList.toggle('open', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+    });
+
+    mobileNav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        mobileNav.classList.remove('open');
+        menuBtn.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', '打开菜单');
+      }
+    });
+  })();
+</script>
+</body>
 </html>

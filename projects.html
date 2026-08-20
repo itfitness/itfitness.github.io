@@ -1,410 +1,593 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>作品集</title>
-		<!-- for-mobile-apps -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<!-- //for-mobile-apps -->
-		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="css/projectsstyle.css" rel="stylesheet" type="text/css" media="all" />
-		<!-- js -->
-		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-		<!-- start-smooth-scrolling -->
-		<script type="text/javascript" src="js/move-top.js"></script>
-		<script type="text/javascript" src="js/easing.js"></script>
-		<link rel="shortcut icon" href="./favicon.ico" />
-		<!-- start-smooth-scrolling -->
-	</head>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#040911">
+<title>我的项目 | Li Meng Lin</title>
+<link rel="shortcut icon" href="./favicon.ico" />
+<style>
+  :root {
+    --bg: #040911;
+    --card-bg: #0a101f;
+    --card-bg-2: #0e1628;
+    --border: rgba(99, 130, 200, 0.16);
+    --text-main: #e6e8ee;
+    --text-sub: #8a92a6;
+    --accent: #3b82f6;
+    --accent-light: #60a5fa;
+    --accent-purple: #a78bfa;
+    --badge-bg: rgba(59, 130, 246, 0.1);
+  }
 
-	<body>
-		<div class="projects" id="projects">
-			<div class="container">
-				<span class="about-top-w3" style="font-size: 1em;">The best of my projects </span>
-				<h4 class="title-w3ls" style="font-size: 2em;">我的作品集</h4>
-				<div class="news-bottom">
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href=""
-									target="_blank">
-									<img src="images/img_zhbd.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="" target="_blank">
-								<h4>智慧步道</h4>
-							</a>
-							<p class="para-w3-agile">
-								与硬件链接的，需要搭建一个大屏设备，和至少一个一体柱，用户在大屏进行扫脸开始跑步，然后在经过柱子的时候会计算跑步距离，大屏上会显示运动的数据，用户也可以扫小程序查看
-							</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href=""
-									target="_blank">
-									<img src="images/img_hktc.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="" target="_blank">
-								<h4>智慧体测</h4>
-							</a>
-							<p class="para-w3-agile">
-								与硬件链接的，运动体测项目，主要用于学校，连接算法服务器，推流摄像头数据，通过视频流分析视频数据检测运动情况，运动包括跳绳、引体向上、跳远、仰卧起坐等，最后根据运动情况和评分标准给使用者评分
-							</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href=""
-									target="_blank">
-									<img src="images/img_shlt.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="" target="_blank">
-								<h4>山河路徒</h4>
-							</a>
-							<p class="para-w3-agile">是本人使用AI辅助UI页面生成到AI辅助代码编程，的纯AI应用。山河路徒是一款专为徒步爱好者设计的记录应用。通过这款应用，你可以：
-            
-            • 记录每一次徒步体验
-            • 添加位置信息和精彩照片
-            • 查看你的足迹地图
-            • 统计到访过的城市
-            • 回顾历史足迹记录
-            
-            让每一步都有意义，让每一次出行都值得纪念。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://sj.qq.com/appdetail/com.zhongjushenghuo.users"
-									target="_blank">
-									<img src="images/img_zjsh.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://sj.qq.com/appdetail/com.zhongjushenghuo.users" target="_blank">
-								<h4>众聚生活</h4>
-							</a>
-							<p class="para-w3-agile">众聚生活APP移动客户端，是本地化聚合型生活服务平台，创新的线上平台，线下的农蓄土特产品与实体店铺，区域化的同城服务，重点关注线下农蓄土特产品与实体店铺的运营效果。给消费者带来便捷的生活与服务需求。给本地农蓄土特产品与实体店铺提供外卖、团购、拼团、砍价和线上推广等多种营销与销售渠道！以科技为根本，以市场为枝干，以服务为果实！下载众聚生活 ，让生活变得更简单快乐。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://sj.qq.com/appdetail/com.hg.grzj"
-									target="_blank">
-									<img src="images/img_szgf.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://sj.qq.com/appdetail/com.hg.grzj" target="_blank">
-								<h4>数智工福</h4>
-							</a>
-							<p class="para-w3-agile">数智工福，专为新时代工人打造的招工平台。海量优质职位信息，覆盖建筑装修、生活服务、工厂制造、物流运输、工程机械、餐饮酒店、商超酒旅、商务服务、热门兼职、农林牧等众多行业的职位信息，每日更新百万条信息，让找活变得更简单。同时，我们为老板精准匹配人才，解决招工难题。特色服务如“持续有活”和“包公管家”让工人享受便捷与舒适。数智工福，开启新时代劳务用工新篇章！</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://sj.qq.com/appdetail/com.hgsz.dczy"
-									target="_blank">
-									<img src="images/img_zzb.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://sj.qq.com/appdetail/com.hgsz.dczy" target="_blank">
-								<h4>智筑宝企业信息管理系统</h4>
-							</a>
-							<p class="para-w3-agile">智筑宝企业信息管理系统于 2024 年创立，是国内专业化的土地流转信息与交易服务平台，涵盖农业用地、宅基地住宅房屋以及招拍挂土地资源等。用户能够发布土地与找地需求，实现线上找地、线下看地，还能免费运用测亩仪、土地评估、地价查询等功能。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://app.mi.com/details?id=com.huigunumber.zshbapp"
-									target="_blank">
-									<img src="images/img_zshb.png" alt="" />
-								</a>
-							</div>
-					
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://app.mi.com/details?id=com.huigunumber.zshbapp" target="_blank">
-								<h4>筑数合宝</h4>
-							</a>
-							<p class="para-w3-agile">筑数合宝面向泛建设方项目建设全过程，为建筑产业全链条提供全过程、一体化、轻量化的产品集成解决方案；推动建筑产业生产模式全新变革。并通过前策数据、集成设计、项目管理、战略目标四大系统实施落地，助力建筑产业中土地、投资、开发、运营相关企业的数字化转型，从而让企业管理更智慧，经营决策更科学。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href=""
-									target="_blank">
-									<img src="images/img_ar.png" alt="" />
-								</a>
-							</div>
-					
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="" target="_blank">
-								<h4>智能急救AR眼镜</h4>
-							</a>
-							<p class="para-w3-agile">一款通过USB外接眼镜摄像头，根据相应算法分析面部数据获取生理信息的应用。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://wwxj.lanzout.com/iLwdp0ny348d"
-									target="_blank">
-									<img src="images/img_miaoyu.png" alt="" />
-								</a>
-							</div>
-					
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://wwxj.lanzout.com/iLwdp0ny348d" target="_blank">
-								<h4>妙遇</h4>
-							</a>
-							<p class="para-w3-agile">同城交友APP，可以查看附近的异性进行聊天交友，聊天的时候可以玩一些像五子棋、摇色子的小游戏，还可以进行音视频通话，也可以发起直播，可以进行礼物打赏，音视频通话和直播对接了OpenGLES实现的美颜滤镜。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="http://www.jinyouapp.com/xiangmuxiazai/haoyuan/index.html"
-									target="_blank">
-									<img src="images/img_hywm.png" alt="" />
-								</a>
-							</div>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="http://www.jinyouapp.com/xiangmuxiazai/haoyuan/index.html" target="_blank">
-								<h4>浩源外卖</h4>
-							</a>
-							<p class="para-w3-agile">一个外卖项目，包含用户端、骑手端和商家端，运营很成功，用户量已有几十万。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://jinyou.oss-cn-qingdao.aliyuncs.com/o2o/ubuy/UBUY.apk"
-									target="_blank">
-									<img src="images/img_ubuy.png" alt="" />
-								</a>
-							</div>
+  /* 隐藏页面滚动条（保留滚动能力） */
+  html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
 
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://jinyou.oss-cn-qingdao.aliyuncs.com/o2o/ubuy/UBUY.apk" target="_blank">
-								<h4>Ubuy</h4>
-							</a>
-							<p class="para-w3-agile">一款德国外卖项目，加入了多语言和Google地图的支持。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="http://60.208.15.171:7863/"
-									target="_blank">
-									<img src="images/chatai.png" alt="" />
-								</a>
-							</div>
-					
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="http://60.208.15.171:7863/" target="_blank">
-								<h4>Chat AI</h4>
-							</a>
-							<p class="para-w3-agile">一款类似ChatGPT的大模型AI聊天的前端程序</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://www.pgyer.com/mODQ" target="_blank">
-									<img src="images/fangzoudiu.png" alt="" />
-								</a>
-							</div>
+  body {
+    background: var(--bg);
+    color: var(--text-main);
+    font-family: "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+  }
 
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://www.pgyer.com/mODQ" target="_blank">
-								<h4>防走丢</h4>
-							</a>
-							<p class="para-w3-agile">一款对接手表的防走丢项目，加入了高德地图主要是展示穿戴手表用户的位置和运动轨迹。
-							</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox"
-									href="https://itfitness-xiaomeihao.oss-cn-beijing.aliyuncs.com/MyApks/dyyh.apk"
-									target="_blank">
-									<img src="images/dongyyh.png" alt="" />
-								</a>
-							</div>
+  a { text-decoration: none; color: inherit; }
+  a, button { -webkit-tap-highlight-color: transparent; }
+  button { font-family: inherit; }
 
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://itfitness-xiaomeihao.oss-cn-beijing.aliyuncs.com/MyApks/dyyh.apk"
-								target="_blank">
-								<h4>东营引黄</h4>
-							</a>
-							<p class="para-w3-agile">一款智能水利项目，用于进行水利的视频监控数据监控等。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://a.app.qq.com/o/simple.jsp?pkgname=com.cn.jj"
-									target="_blank">
-									<img src="images/img_jj.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.cn.jj" target="_blank">
-								<h4>顺达卡友</h4>
-							</a>
-							<p class="para-w3-agile">一款物流APP可用于发布货源信息和车源信息，并可以通过APP发布求助信息。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-	<!-- 				<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox"
-									href="http://itfitness.gitee.io/xiaomeihaoweb/"
-									target="_blank">
-									<img src="images/img_xiaomeihao.png" alt="" />
-								</a>
-							</div>
+  /* ---------- 背景装饰：光晕 + 粒子 ---------- */
+  .bg-glow {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .bg-glow.glow-1 {
+    width: 640px; height: 640px;
+    background: rgba(59, 130, 246, 0.10);
+    top: -180px; right: -120px;
+  }
+  .bg-glow.glow-2 {
+    width: 520px; height: 520px;
+    background: rgba(167, 139, 250, 0.045);
+    bottom: -220px; left: -180px;
+  }
+  .bg-dots {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(rgba(96, 165, 250, 0.35) 1px, transparent 1px),
+      radial-gradient(rgba(96, 165, 250, 0.18) 1px, transparent 1px);
+    background-size: 220px 220px, 160px 160px;
+    background-position: 40px 60px, 120px 20px;
+    opacity: 0.22;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.2) 60%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.2) 60%, transparent);
+  }
 
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="http://itfitness.gitee.io/xiaomeihaoweb/"
-								target="_blank">
-								<h4>小美好</h4>
-							</a>
-							<p class="para-w3-agile">这是一款本人自己业余时间开发的可用于发布自己日常美好事情的应用，类似于朋友圈。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="clearfix"> </div> -->
-			<!-- 		<div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://www.eyunhe.com.cn/download/" target="_blank">
-									<img src="images/img_eyh.png" alt="" />
-								</a>
-							</div>
+  .page { position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 0 40px; }
 
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://www.eyunhe.com.cn/download/" target="_blank">
-								<h4>e运河</h4>
-							</a>
-							<p class="para-w3-agile">
-								一款由本人在山东宇易信息科技股份有限公司任职期间开发的一款着力为中、小、微企业提供网络化产经信息服务、电子化商贸交易服务、智慧化生产技术升级服务的智慧化移动互联网服务平台。通过开发这款软件使我对于支付与地图应用方面有了深入的理解，另外对于电商的模式也有了更深层次的理解。
-							</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div> -->
-					<!-- <div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://www.hehuidai.com/wap/downloadAndroid">
-									<img src="images/img_hhd.png" alt="" />
-								</a>
-							</div>
+  /* ---------- 顶部导航 ---------- */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: rgba(10, 14, 26, 0.72);
+    border-bottom: 1px solid rgba(99, 130, 200, 0.08);
+  }
+  .header-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo img { height: 44px; display: block; }
+  .nav { display: flex; gap: 40px; }
+  .nav a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-sub);
+    padding: 6px 2px;
+    position: relative;
+    transition: color 0.2s;
+  }
+  .nav a:hover { color: var(--text-main); }
+  .nav a.active { color: var(--text-main); }
+  .nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4px;
+    width: 22px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
 
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://www.hehuidai.com/wap/downloadAndroid">
-								<h4>合汇贷</h4>
-							</a>
-							<p class="para-w3-agile">
-								一款由本人在济南合会金融软件服务有限公司任职期间独立开发的P2P互联网金融APP，通过此项目使我在自定义View方面有了很大的进步，能够进行高级的自定义View的开发，另外这个项目在对于Http请求所携带的数据有着复杂的处理如cookie持久化，这使我对于HTTP协议有了更加深入的理解。
-							</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div> -->
-					<!-- <div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://wwa.lanzoui.com/i7y3sjg">
-									<img src="images/img_plane.png" alt="" />
-								</a>
-							</div>
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://wwa.lanzoui.com/i7y3sjg">
-								<h4>萌萌大作战</h4>
-							</a>
-							<p class="para-w3-agile">
-								一款由本人自己设计开发的类似飞机大战的小游戏，这款游戏的开发主要是对于SurfaceView的绘制以及SoundPool短声音播放的应用。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div> -->
-					<!-- <div class="news-one-wthree-agile">
-						<div class="col-md-6 news-left">
-							<div class="biseller-column">
-								<a class="lightbox" href="https://wwa.lanzoui.com/i7vsl5c">
-									<img src="images/img_mchat.png" alt="" />
-								</a>
-							</div>
+  /* ---------- 移动端菜单 ---------- */
+  .menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 0 10px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .menu-btn span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text-main);
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .menu-btn:hover { border-color: rgba(96, 165, 250, 0.45); }
+  .menu-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menu-btn.open span:nth-child(2) { opacity: 0; }
+  .menu-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-						</div>
-						<div class="col-md-6 news-right">
-							<a href="https://wwa.lanzoui.com/i7vsl5c">
-								<h4>萌聊</h4>
-							</a>
-							<p class="para-w3-agile">一款由本人自己研发的即时通讯软件，集成了环信SDK，主要是用于学习环信SDK而开发的，实现了单聊和群聊的功能。</p>
-						</div>
-						<div class="clearfix"> </div>
-					</div> -->
-				</div>
-			</div>
-		</div>
-		</div>
-		<!-- here stars scrolling icon -->
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$().UItoTop({
-					easingType: 'easeOutQuart'
-				});
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    padding: 4px 40px 12px;
+    border-top: 1px solid rgba(99, 130, 200, 0.1);
+    background: rgba(10, 14, 26, 0.98);
+  }
+  .mobile-nav a {
+    padding: 13px 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-sub);
+    border-bottom: 1px solid rgba(99, 130, 200, 0.08);
+    transition: color 0.2s;
+  }
+  .mobile-nav a:last-child { border-bottom: none; }
+  .mobile-nav a:hover, .mobile-nav a.active { color: var(--accent-light); }
+  .mobile-nav.open { display: flex; }
 
-			});
-		</script>
-	</body>
+  /* ---------- 页头 ---------- */
+  .page-hero { padding: 52px 0 36px; }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: var(--badge-bg);
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    color: var(--accent-light);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .hero-badge .code { font-family: Consolas, Menlo, monospace; font-weight: 700; }
+  .page-hero h1 {
+    font-size: clamp(28px, 6vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+  }
+  .page-hero h1 .name {
+    background: linear-gradient(100deg, var(--accent-light), var(--accent-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .page-hero-desc {
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: var(--text-sub);
+    max-width: 640px;
+  }
+
+  /* ---------- 项目网格 ---------- */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-bottom: 40px;
+  }
+  .project-card {
+    background: linear-gradient(180deg, var(--card-bg-2), var(--card-bg));
+    border: 1px solid rgba(99, 130, 200, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(96, 165, 250, 0.4);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(96, 165, 250, 0.12);
+  }
+
+  .project-cover {
+    display: block;
+    aspect-ratio: 16 / 10;
+    background: #0d1322;
+    border-bottom: 1px solid rgba(99, 130, 200, 0.15);
+    overflow: hidden;
+  }
+  .project-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+  }
+  .project-card:hover .project-cover img { transform: scale(1.05); }
+
+  .project-body {
+    padding: 18px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-title {
+    font-size: 17.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+  }
+  .project-title a { transition: color 0.2s; }
+  .project-title a:hover { color: var(--accent-light); }
+  .project-desc {
+    flex: 1;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--text-sub);
+  }
+
+  .card-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--accent-light);
+    margin-top: 14px;
+    transition: gap 0.2s;
+  }
+  .card-more:hover { gap: 11px; }
+  .card-more svg { width: 14px; height: 14px; }
+
+  /* ---------- Footer ---------- */
+  .footer {
+    border-top: 1px solid rgba(99, 130, 200, 0.1);
+    padding: 16px 0 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #6b7387;
+    letter-spacing: 0.4px;
+  }
+
+  /* ---------- 响应式 ---------- */
+  /* 平板：隐藏桌面导航，改用汉堡菜单；项目网格改为两栏 */
+  @media (max-width: 1024px) {
+    .nav { display: none; }
+    .menu-btn { display: flex; }
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  /* 手机端细节适配 */
+  @media (max-width: 640px) {
+    .page, .header-inner { padding: 0 20px; }
+    .header-inner { height: 62px; }
+    .mobile-nav { padding: 4px 20px 12px; }
+    .logo img { height: 38px; }
+    .page-hero { padding: 36px 0 28px; }
+    .hero-badge { font-size: 13px; padding: 6px 14px; margin-bottom: 14px; }
+    .page-hero-desc { font-size: 14.5px; }
+    .projects-grid { grid-template-columns: 1fr; gap: 16px; padding-bottom: 28px; }
+    .project-title { font-size: 16.5px; }
+    .project-body { padding: 16px 16px; }
+    .footer { padding: 14px 0 18px; font-size: 12px; }
+  }
+  /* 尊重系统"减少动态效果"设置 */
+  @media (prefers-reduced-motion: reduce) {
+    .project-card, .project-cover img, .card-more { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg-glow glow-1"></div>
+<div class="bg-glow glow-2"></div>
+<div class="bg-dots"></div>
+
+<!-- ===================== 导航栏 ===================== -->
+<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="./index.html">
+      <img src="images/home-topleftlogo.png" alt="Li Lin Logo">
+    </a>
+    <nav class="nav">
+      <a href="./index.html">首页</a>
+      <a href="https://www.jianshu.com/u/766a13e86f82" target="_blank" rel="noopener">技术博客</a>
+      <a class="active" href="./projects.html">我的项目</a>
+      <a href="./resume/resume.html" target="_blank">我的简历</a>
+      <a href="./certificates.html">我的证书</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="移动端导航">
+    <a href="./index.html">首页</a>
+    <a href="https://www.jianshu.com/u/766a13e86f82" target="_blank" rel="noopener">技术博客</a>
+    <a class="active" href="./projects.html">我的项目</a>
+    <a href="./resume/resume.html" target="_blank">我的简历</a>
+    <a href="./certificates.html">我的证书</a>
+  </nav>
+</header>
+
+<div class="page">
+
+  <!-- ===================== 页头 ===================== -->
+  <section class="page-hero">
+    <div class="hero-badge"><span class="code">&lt;/&gt;</span> Projects</div>
+    <h1>我的<span class="name">作品集</span></h1>
+    <p class="page-hero-desc">深耕移动端开发多年，主导与参与了多个完整落地的项目，方向涵盖智慧硬件、AI 应用、生活服务、社交与物流等领域。</p>
+  </section>
+
+  <!-- ===================== 项目网格 ===================== -->
+  <section class="projects-grid">
+
+    <article class="project-card">
+      <div class="project-cover">
+        <img src="images/img_zhbd.png" alt="智慧步道" loading="lazy">
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">智慧步道</h3>
+        <p class="project-desc">与硬件链接的，需要搭建一个大屏设备，和至少一个一体柱，用户在大屏进行扫脸开始跑步，然后在经过柱子的时候会计算跑步距离，大屏上会显示运动的数据，用户也可以扫小程序查看。</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-cover">
+        <img src="images/img_hktc.png" alt="智慧体测" loading="lazy">
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">智慧体测</h3>
+        <p class="project-desc">与硬件链接的，运动体测项目，主要用于学校，连接算法服务器，推流摄像头数据，通过视频流分析视频数据检测运动情况，运动包括跳绳、引体向上、跳远、仰卧起坐等，最后根据运动情况和评分标准给使用者评分。</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-cover">
+        <img src="images/img_shlt.png" alt="山河路徒" loading="lazy">
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">山河路徒</h3>
+        <p class="project-desc">使用 AI 辅助 UI 页面生成与 AI 辅助代码编程完成的纯 AI 应用。专为徒步爱好者设计的记录应用：记录每一次徒步体验、添加位置信息和精彩照片、查看足迹地图、统计到访过的城市、回顾历史足迹记录，让每一步都有意义，让每一次出行都值得纪念。</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="https://sj.qq.com/appdetail/com.zhongjushenghuo.users" target="_blank" rel="noopener">
+        <img src="images/img_zjsh.png" alt="众聚生活" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="https://sj.qq.com/appdetail/com.zhongjushenghuo.users" target="_blank" rel="noopener">众聚生活</a></h3>
+        <p class="project-desc">众聚生活APP移动客户端，是本地化聚合型生活服务平台，创新的线上平台，线下的农蓄土特产品与实体店铺，区域化的同城服务。给本地农蓄土特产品与实体店铺提供外卖、团购、拼团、砍价和线上推广等多种营销与销售渠道。</p>
+        <a class="card-more" href="https://sj.qq.com/appdetail/com.zhongjushenghuo.users" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="https://sj.qq.com/appdetail/com.hg.grzj" target="_blank" rel="noopener">
+        <img src="images/img_szgf.png" alt="数智工福" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="https://sj.qq.com/appdetail/com.hg.grzj" target="_blank" rel="noopener">数智工福</a></h3>
+        <p class="project-desc">数智工福，专为新时代工人打造的招工平台。海量优质职位信息，覆盖建筑装修、生活服务、工厂制造、物流运输、工程机械、餐饮酒店等众多行业，每日更新百万条信息，让找活变得更简单。同时为老板精准匹配人才，解决招工难题。</p>
+        <a class="card-more" href="https://sj.qq.com/appdetail/com.hg.grzj" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="https://sj.qq.com/appdetail/com.hgsz.dczy" target="_blank" rel="noopener">
+        <img src="images/img_zzb.png" alt="智筑宝企业信息管理系统" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="https://sj.qq.com/appdetail/com.hgsz.dczy" target="_blank" rel="noopener">智筑宝企业信息管理系统</a></h3>
+        <p class="project-desc">智筑宝企业信息管理系统于 2024 年创立，是国内专业化的土地流转信息与交易服务平台，涵盖农业用地、宅基地住宅房屋以及招拍挂土地资源等。用户能够发布土地与找地需求，实现线上找地、线下看地，还能免费运用测亩仪、土地评估、地价查询等功能。</p>
+        <a class="card-more" href="https://sj.qq.com/appdetail/com.hgsz.dczy" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="https://app.mi.com/details?id=com.huigunumber.zshbapp" target="_blank" rel="noopener">
+        <img src="images/img_zshb.png" alt="筑数合宝" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="https://app.mi.com/details?id=com.huigunumber.zshbapp" target="_blank" rel="noopener">筑数合宝</a></h3>
+        <p class="project-desc">筑数合宝面向泛建设方项目建设全过程，为建筑产业全链条提供全过程、一体化、轻量化的产品集成解决方案。通过前策数据、集成设计、项目管理、战略目标四大系统实施落地，助力建筑产业中土地、投资、开发、运营相关企业的数字化转型。</p>
+        <a class="card-more" href="https://app.mi.com/details?id=com.huigunumber.zshbapp" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <div class="project-cover">
+        <img src="images/img_ar.png" alt="智能急救AR眼镜" loading="lazy">
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">智能急救AR眼镜</h3>
+        <p class="project-desc">一款通过USB外接眼镜摄像头，根据相应算法分析面部数据获取生理信息的应用。</p>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="https://wwxj.lanzout.com/iLwdp0ny348d" target="_blank" rel="noopener">
+        <img src="images/img_miaoyu.png" alt="妙遇" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="https://wwxj.lanzout.com/iLwdp0ny348d" target="_blank" rel="noopener">妙遇</a></h3>
+        <p class="project-desc">同城交友APP，可以查看附近的异性进行聊天交友，聊天的时候可以玩一些像五子棋、摇色子的小游戏，还可以进行音视频通话，也可以发起直播，可以进行礼物打赏，音视频通话和直播对接了OpenGLES实现的美颜滤镜。</p>
+        <a class="card-more" href="https://wwxj.lanzout.com/iLwdp0ny348d" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="http://www.jinyouapp.com/xiangmuxiazai/haoyuan/index.html" target="_blank" rel="noopener">
+        <img src="images/img_hywm.png" alt="浩源外卖" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="http://www.jinyouapp.com/xiangmuxiazai/haoyuan/index.html" target="_blank" rel="noopener">浩源外卖</a></h3>
+        <p class="project-desc">一个外卖项目，包含用户端、骑手端和商家端，运营很成功，用户量已有几十万。</p>
+        <a class="card-more" href="http://www.jinyouapp.com/xiangmuxiazai/haoyuan/index.html" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="https://jinyou.oss-cn-qingdao.aliyuncs.com/o2o/ubuy/UBUY.apk" target="_blank" rel="noopener">
+        <img src="images/img_ubuy.png" alt="Ubuy" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="https://jinyou.oss-cn-qingdao.aliyuncs.com/o2o/ubuy/UBUY.apk" target="_blank" rel="noopener">Ubuy</a></h3>
+        <p class="project-desc">一款德国外卖项目，加入了多语言和Google地图的支持。</p>
+        <a class="card-more" href="https://jinyou.oss-cn-qingdao.aliyuncs.com/o2o/ubuy/UBUY.apk" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="http://60.208.15.171:7863/" target="_blank" rel="noopener">
+        <img src="images/chatai.png" alt="Chat AI" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="http://60.208.15.171:7863/" target="_blank" rel="noopener">Chat AI</a></h3>
+        <p class="project-desc">一款类似ChatGPT的大模型AI聊天的前端程序。</p>
+        <a class="card-more" href="http://60.208.15.171:7863/" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="https://www.pgyer.com/mODQ" target="_blank" rel="noopener">
+        <img src="images/fangzoudiu.png" alt="防走丢" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="https://www.pgyer.com/mODQ" target="_blank" rel="noopener">防走丢</a></h3>
+        <p class="project-desc">一款对接手表的防走丢项目，加入了高德地图主要是展示穿戴手表用户的位置和运动轨迹。</p>
+        <a class="card-more" href="https://www.pgyer.com/mODQ" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="https://itfitness-xiaomeihao.oss-cn-beijing.aliyuncs.com/MyApks/dyyh.apk" target="_blank" rel="noopener">
+        <img src="images/dongyyh.png" alt="东营引黄" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="https://itfitness-xiaomeihao.oss-cn-beijing.aliyuncs.com/MyApks/dyyh.apk" target="_blank" rel="noopener">东营引黄</a></h3>
+        <p class="project-desc">一款智能水利项目，用于进行水利的视频监控数据监控等。</p>
+        <a class="card-more" href="https://itfitness-xiaomeihao.oss-cn-beijing.aliyuncs.com/MyApks/dyyh.apk" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <a class="project-cover" href="https://a.app.qq.com/o/simple.jsp?pkgname=com.cn.jj" target="_blank" rel="noopener">
+        <img src="images/img_jj.png" alt="顺达卡友" loading="lazy">
+      </a>
+      <div class="project-body">
+        <h3 class="project-title"><a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.cn.jj" target="_blank" rel="noopener">顺达卡友</a></h3>
+        <p class="project-desc">一款物流APP可用于发布货源信息和车源信息，并可以通过APP发布求助信息。</p>
+        <a class="card-more" href="https://a.app.qq.com/o/simple.jsp?pkgname=com.cn.jj" target="_blank" rel="noopener">
+          查看详情
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    © 2026 Li Meng Lin. All rights reserved.
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var menuBtn = document.getElementById('menuBtn');
+    var mobileNav = document.getElementById('mobileNav');
+
+    menuBtn.addEventListener('click', function () {
+      var open = !mobileNav.classList.contains('open');
+      mobileNav.classList.toggle('open', open);
+      menuBtn.classList.toggle('open', open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+    });
+
+    mobileNav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        mobileNav.classList.remove('open');
+        menuBtn.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', '打开菜单');
+      }
+    });
+  })();
+</script>
+</body>
 </html>
