@@ -535,6 +535,29 @@
   .card-more:hover { gap: 11px; }
   .card-more svg { width: 14px; height: 14px; }
 
+  /* ---------- 右下角悬浮按钮 ---------- */
+  .float-agent-btn {
+    position: fixed;
+    right: 28px;
+    bottom: 120px;
+    z-index: 90;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+  }
+  .float-agent-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .float-agent-btn:hover { transform: translateY(-4px) scale(1.05); }
+
   /* ---------- Footer ---------- */
   .footer {
     border-top: 1px solid rgba(99, 130, 200, 0.1);
@@ -578,6 +601,7 @@
     .card-icon { width: 42px; height: 40px; }
     .thumb-content { height: 96px; }
     .footer { padding: 14px 0 18px; font-size: 12px; }
+    .float-agent-btn { width: 54px; height: 54px; right: 18px; bottom: 96px; }
   }
   /* 尊重系统"减少动态效果"设置 */
   @media (prefers-reduced-motion: reduce) {
@@ -866,6 +890,11 @@
   </footer>
 
 </div>
+
+<!-- 右下角悬浮按钮 -->
+<a class="float-agent-btn" href="http://itfitness.xyz:8000/" target="_blank" rel="noopener" aria-label="打开 AI 智能体">
+  <img src="images/agent.webp" alt="AI 智能体">
+</a>
 
 <script>
   (function () {
