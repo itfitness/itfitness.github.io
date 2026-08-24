@@ -541,22 +541,66 @@
     right: 28px;
     bottom: 120px;
     z-index: 90;
+    height: 64px;
+    width: 64px;
+    border-radius: 999px;
+    background: linear-gradient(150deg, rgba(30, 41, 72, 0.92), rgba(10, 15, 30, 0.95));
+    border: 1px solid rgba(96, 165, 250, 0.35);
+    box-shadow: 0 8px 28px rgba(37, 99, 235, 0.35), inset 0 1px 0 rgba(148, 197, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1), transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .float-agent-btn:hover {
+    width: 280px;
+    transform: translateY(-3px);
+    border-color: rgba(96, 165, 250, 0.65);
+    box-shadow: 0 12px 34px rgba(37, 99, 235, 0.5), inset 0 1px 0 rgba(148, 197, 255, 0.16);
+  }
+  .float-agent-icon {
+    flex: none;
     width: 64px;
     height: 64px;
-    border-radius: 50%;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s;
   }
-  .float-agent-btn img {
+  .float-agent-icon img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transform: translateY(4%) scale(1.5); /* 图标素材自带透明留白且圆心略偏上，放大并下移让圆形图标均匀贴近边缘 */
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     display: block;
   }
-  .float-agent-btn:hover { transform: translateY(-4px) scale(1.05); }
+  /* 展开时图标右移与右边框相切（窄屏下图标本已贴合，不需偏移） */
+  .float-agent-btn:hover .float-agent-icon img {
+    transform: translate(2px, 4%) scale(1.5);
+  }
+  .float-agent-text {
+    flex: 1;
+    min-width: 0;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: linear-gradient(100deg, var(--accent-light), var(--accent-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: max-width 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease 0.1s;
+  }
+  .float-agent-btn:hover .float-agent-text {
+    max-width: 216px;
+    opacity: 1;
+  }
 
   /* ---------- Footer ---------- */
   .footer {
@@ -601,7 +645,9 @@
     .card-icon { width: 42px; height: 40px; }
     .thumb-content { height: 96px; }
     .footer { padding: 14px 0 18px; font-size: 12px; }
-    .float-agent-btn { width: 54px; height: 54px; right: 18px; bottom: 96px; }
+    .float-agent-btn { height: 54px; width: 54px; right: 18px; bottom: 96px; }
+    .float-agent-icon { width: 54px; height: 54px; }
+    .float-agent-btn:hover .float-agent-icon img { transform: translateY(4%) scale(1.5); }
   }
   /* 尊重系统"减少动态效果"设置 */
   @media (prefers-reduced-motion: reduce) {
@@ -892,8 +938,11 @@
 </div>
 
 <!-- 右下角悬浮按钮 -->
-<a class="float-agent-btn" href="http://itfitness.xyz:8000/" target="_blank" rel="noopener" aria-label="打开 AI 智能体">
-  <img src="images/agent.webp" alt="AI 智能体">
+<a class="float-agent-btn" href="http://itfitness.xyz:8000/" target="_blank" rel="noopener" aria-label="我是小李助手，欢迎向我提问">
+  <span class="float-agent-text">我是小李助手，欢迎向我提问</span>
+  <span class="float-agent-icon">
+    <img src="images/agent.webp" alt="小李助手">
+  </span>
 </a>
 
 <script>
